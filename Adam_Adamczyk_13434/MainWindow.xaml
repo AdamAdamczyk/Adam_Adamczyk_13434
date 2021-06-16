@@ -1,0 +1,99 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Symulator" Height="349" Width="800">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="AX" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Run Text="AX = "/>
+                    <Run Text="{Binding ElementName=TextAX, Path=Text}"/>
+                </TextBlock>
+
+                <TextBlock x:Name="BX" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Run Text="BX = "/>
+                    <Run Text="{Binding ElementName=TextBX, Path=Text}"/>
+                </TextBlock>
+
+                <TextBlock x:Name="CX" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Run Text="CX = "/>
+                    <Run Text="{Binding ElementName=TextCX, Path=Text}"/>
+                </TextBlock>
+
+                <TextBlock x:Name="DX" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Run Text="DX = "/>
+                    <Run Text="{Binding ElementName=TextDX, Path=Text}"/>
+                </TextBlock>
+
+                <TextBox MaxLength="4" x:Name="TextAX" PreviewTextInput="walidator" Grid.Row="0" Grid.Column="1" CharacterCasing="Upper"/>
+                <TextBox MaxLength="4" x:Name="TextBX" PreviewTextInput="walidator" Grid.Row="1" Grid.Column="1" CharacterCasing="Upper"/>
+                <TextBox MaxLength="4" x:Name="TextCX" PreviewTextInput="walidator" Grid.Row="2" Grid.Column="1" CharacterCasing="Upper"/>
+                <TextBox MaxLength="4" x:Name="TextDX" PreviewTextInput="walidator" Grid.Row="3" Grid.Column="1" CharacterCasing="Upper"/>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="ButtonMOVAXBX" Click="ButtonMOVAXBX_Click" Grid.Row="0" Grid.Column="0" Content="MOV AX, BX"/>
+                <Button x:Name="ButtonMOVAXCX" Click="ButtonMOVAXCX_Click" Grid.Row="1" Grid.Column="0" Content="MOV AX,CX"/>
+                <Button x:Name="ButtonMOVAXDX" Click="ButtonMOVAXDX_Click" Grid.Row="2" Grid.Column="0" Content="MOV AX, DX"/>
+                <Button x:Name="ButtonMOVBXAX" Click="ButtonMOVBXAX_Click" Grid.Row="3" Grid.Column="0" Content="MOV BX, AX"/>
+                <Button x:Name="ButtonMOVBXCX" Click="ButtonMOVBXCX_Click" Grid.Row="4" Grid.Column="0" Content="MOV BX, CX"/>
+                <Button x:Name="ButtonMOVBXDX" Click="ButtonMOVBXDX_Click" Grid.Row="5" Grid.Column="0" Content="MOV BX, DX"/>
+                <Button x:Name="ButtonMOVCXAX" Click="ButtonMOVCXAX_Click" Grid.Row="6" Grid.Column="0" Content="MOV CX, AX"/>
+                <Button x:Name="ButtonMOVCXBX" Click="ButtonMOVCXBX_Click" Grid.Row="7" Grid.Column="0" Content="MOV CX, BX"/>
+                <Button x:Name="ButtonMOVCXDX" Click="ButtonMOVCXDX_Click" Grid.Row="8" Grid.Column="0" Content="MOV CX, DX"/>
+                <Button x:Name="ButtonMOVDXAX" Click="ButtonMOVDXAX_Click" Grid.Row="9" Grid.Column="0" Content="MOV DX, AX"/>
+                <Button x:Name="ButtonMOVDXBX" Click="ButtonMOVDXBX_Click" Grid.Row="10" Grid.Column="0" Content="MOV DX, BX"/>
+                <Button x:Name="ButtonMOVDXCX" Click="ButtonMOVDXCX_Click" Grid.Row="11" Grid.Column="0" Content="MOV DX, CX"/>
+                <Button x:Name="ButtonXCHGAXBX" Click="ButtonXCHGAXBX_Click" Grid.Row="0" Grid.Column="1" Content="XCHG AX, BX"/>
+                <Button x:Name="ButtonXCHGAXCX" Click="ButtonXCHGAXCX_Click" Grid.Row="1" Grid.Column="1" Content="XCHG AX, CX"/>
+                <Button x:Name="ButtonXCHGAXDX" Click="ButtonXCHGAXDX_Click" Grid.Row="2" Grid.Column="1" Content="XCHG AX, DX"/>
+                <Button x:Name="ButtonXCHGBXAX" Click="ButtonXCHGBXAX_Click" Grid.Row="3" Grid.Column="1" Content="XCHG BX, AX"/>
+                <Button x:Name="ButtonXCHGBXCX" Click="ButtonXCHGBXCX_Click" Grid.Row="4" Grid.Column="1" Content="XCHG BX, CX"/>
+                <Button x:Name="ButtonXCHGBXDX" Click="ButtonXCHGBXDX_Click" Grid.Row="5" Grid.Column="1" Content="XCHG BX, DX"/>
+                <Button x:Name="ButtonXCHGCXAX" Click="ButtonXCHGCXAX_Click" Grid.Row="6" Grid.Column="1" Content="XCHG CX, AX"/>
+                <Button x:Name="ButtonXCHGCXBX" Click="ButtonXCHGCXBX_Click" Grid.Row="7" Grid.Column="1" Content="XCHG CX, BX"/>
+                <Button x:Name="ButtonXCHGCXDX" Click="ButtonXCHGCXDX_Click" Grid.Row="8" Grid.Column="1" Content="XCHG CX, DX"/>
+                <Button x:Name="ButtonXCHGDXAX" Click="ButtonXCHGDXAX_Click" Grid.Row="9" Grid.Column="1" Content="XCHG DX, AX"/>
+                <Button x:Name="ButtonXCHGDXBX" Click="ButtonXCHGDXBX_Click" Grid.Row="10" Grid.Column="1" Content="XCHG DX, BX"/>
+                <Button x:Name="ButtonXCHGDXCX" Click="ButtonXCHGDXCX_Click" Grid.Row="11" Grid.Column="1" Content="XCHG DX, CX"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Window>
